@@ -28,3 +28,14 @@ const agregarAmigo = () => {
     }
     limpiarInput();
 }
+
+const sortearAmigo = () => {
+    if ((listaUsuario.length - 1) < 0) {
+        labelResultado.style = "color:red";
+        labelResultado.innerHTML = "ANTES DE SORTEAR, INGRESE SIQUIERA UN AMIGO.";
+    } else {
+        let indiceAmigoRandom = Math.floor(Math.random() * listaUsuario.length);
+        labelResultado.style = "color:green";
+        labelResultado.innerHTML = `Su amigo secreto es: ${listaUsuario[indiceAmigoRandom]}`;
+    }
+}
